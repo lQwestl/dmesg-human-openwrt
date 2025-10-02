@@ -55,7 +55,7 @@ chmod +x /root/dmesg_human.sh
 ### Способ 2: Загрузка через wget/curl
 
 ```sh
-wget -O /root/dmesg_human.sh https://raw.githubusercontent.com/ваш-username/dmesg-human-openwrt/main/dmesg_human.sh
+wget -O /root/dmesg_human.sh https://raw.githubusercontent.com/lQwestl/dmesg-human-openwrt/main/dmesg_human.sh
 chmod +x /root/dmesg_human.sh
 ```
 
