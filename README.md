@@ -83,14 +83,25 @@ chmod +x /root/dmesg_human.sh
 
 ### Создание алиаса для удобства
 
-Добавьте в `/etc/profile` или `~/.profile`:
+**Вариант 1: Глобальный алиас (рекомендуется)**
+
+Добавьте алиас в `/etc/shinit` для всех пользователей:
+
 ```sh
-alias dmesg-human='/root/dmesg_human.sh'
+echo "alias dmesg-human='/root/dmesg_human.sh'" >> /etc/shinit
 ```
 
-После этого перезагрузите профиль:
+**Вариант 2: Локальный алиас**
+
+Для текущего пользователя добавьте в `~/.shinit`:
+
 ```sh
-source /etc/profile
+echo "alias dmesg-human='/root/dmesg_human.sh'" >> ~/.shinit
+```
+
+После добавления алиаса выполните:
+```sh
+. /etc/shinit
 ```
 
 Теперь можно использовать просто:
